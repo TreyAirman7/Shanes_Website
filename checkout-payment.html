@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Payment - Kannon Hat Co.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {font-family: 'Open Sans', sans-serif; background-color: #FFFBEB; color: #1F2937;}
+        h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;}
+        .nav-link-hover:hover {color: #B91C1C;}
+        .kannon-red {background-color: #B91C1C; color: white;}
+        .kannon-red-text {color: #B91C1C;}
+        .kannon-red-border {border-color: #B91C1C;}
+        .kannon-red-hover:hover {background-color: #A01717;}
+        .dropdown:hover .dropdown-menu {display: block;}
+        .dropdown-menu {display: none;position: absolute;background-color: #ffffff;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 50;border-radius: 0.375rem;border: 1px solid #e5e7eb;}
+        .dropdown-menu a {color: #1F2937;padding: 12px 16px;text-decoration: none;display: block;}
+        .dropdown-menu a:hover {background-color: #f3f4f6;}
+        .kannon-logo img {max-height: 60px; width: auto;}
+        @media (min-width: 768px) {.kannon-logo img {max-height: 80px;}}
+        footer {background-color: #1F2937;color: #FFFBEB;}
+        footer a:hover {color: #B91C1C;}
+        .footer-icon {font-size: 1.5rem;margin: 0 0.5rem;}
+        .order-summary { background-color: #f9fafb; /* Light gray */ }
+        /* Placeholder for payment gateway form */
+        #payment-form-placeholder {
+            border: 2px dashed #cbd5e1; /* gray-300 */
+            padding: 2rem;
+            text-align: center;
+            color: #6b7280; /* gray-500 */
+            border-radius: 0.375rem; /* md */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 kannon-logo">
+                    <a href="index.html"> <img src="images/Kannon_Logo_2.png" alt="Kannon Hat Co. Logo"></a>
+                </div>
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    {/* Desktop Nav Links - same as other pages */}
+                     <div class="relative dropdown">
+                        <button class="font-semibold nav-link-hover focus:outline-none py-2">SHOP HATS <i class="fas fa-chevron-down fa-xs ml-1"></i></button>
+                        <div class="dropdown-menu mt-2 w-48 rounded-md shadow-lg py-1">
+                            <a href="fedoras.html" class="block px-4 py-2 text-sm">Fedoras</a> <a href="beanies.html" class="block px-4 py-2 text-sm">Beanies</a> <a href="baseball-caps.html" class="block px-4 py-2 text-sm">Baseball Caps</a> <a href="sun-hats.html" class="block px-4 py-2 text-sm">Sun Hats</a> <a href="new-arrivals.html" class="block px-4 py-2 text-sm font-semibold kannon-red-text">New Arrivals</a> <a href="best-sellers.html" class="block px-4 py-2 text-sm">Best Sellers</a> <a href="shop.html" class="block px-4 py-2 text-sm border-t border-gray-200">All Hats</a>
+                        </div>
+                    </div>
+                    <a href="our-story.html" class="font-semibold nav-link-hover">OUR STORY</a> <a href="style-guide.html" class="font-semibold nav-link-hover">STYLE GUIDE</a> <a href="contact.html" class="font-semibold nav-link-hover">CONTACT / HELP</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    {/* Utility Icons - cart link to cart.html */}
+                    <a href="search-results.html" class="text-gray-600 hover:text-red-700"><i class="fas fa-search fa-lg"></i></a> <a href="login.html" class="text-gray-600 hover:text-red-700"><i class="fas fa-user fa-lg"></i></a>
+                    <a href="cart.html" class="text-gray-600 hover:text-red-700 relative"><i class="fas fa-shopping-cart fa-lg"></i><span id="cart-item-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span></a>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-red-700 focus:outline-none"><i class="fas fa-bars fa-lg"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            {/* Mobile Nav Links - same as other pages */}
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="mb-8 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold">Checkout</h1>
+            <div class="flex justify-center items-center space-x-2 sm:space-x-4 mt-4 text-xs sm:text-sm">
+                <a href="checkout-shipping.html" class="flex items-center text-gray-500 hover:text-red-600">
+                    <i class="fas fa-check-circle mr-1 sm:mr-2 text-green-500"></i>Shipping
+                </a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="flex items-center text-red-600 font-semibold">
+                    <i class="fas fa-credit-card mr-1 sm:mr-2"></i>Payment
+                </span>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="flex items-center text-gray-500">
+                    <i class="far fa-circle mr-1 sm:mr-2"></i>Confirmation {/* Updated icon to show it's not done */}
+                </span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+            <section class="lg:col-span-2 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-6">Payment Details</h2>
+
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-3">Select Payment Method</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-4 border border-gray-300 rounded-md hover:border-red-500 cursor-pointer has-[:checked]:border-red-500 has-[:checked]:ring-2 has-[:checked]:ring-red-300">
+                            <input type="radio" name="payment-method" value="credit-card" class="focus:ring-red-500 h-4 w-4 text-red-600 border-gray-300" checked>
+                            <span class="ml-3 font-medium text-gray-900">Credit / Debit Card</span>
+                            <div class="ml-auto flex space-x-2">
+                                <i class="fab fa-cc-visa fa-2x text-gray-500"></i>
+                                <i class="fab fa-cc-mastercard fa-2x text-gray-500"></i>
+                                <i class="fab fa-cc-amex fa-2x text-gray-500"></i>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border border-gray-300 rounded-md hover:border-red-500 cursor-pointer has-[:checked]:border-red-500 has-[:checked]:ring-2 has-[:checked]:ring-red-300">
+                            <input type="radio" name="payment-method" value="paypal" class="focus:ring-red-500 h-4 w-4 text-red-600 border-gray-300">
+                            <span class="ml-3 font-medium text-gray-900">PayPal</span>
+                            <i class="fab fa-paypal fa-2x text-blue-600 ml-auto"></i>
+                        </label>
+                        {/* Add other payment methods like Google Pay, Apple Pay if supported by your gateway */}
+                    </div>
+                </div>
+
+                <div id="credit-card-fields"> {/* Show/hide this based on selection */}
+                    <h3 class="text-lg font-semibold mb-4 mt-6">Card Information</h3>
+                    <div id="payment-form-placeholder">
+                        <i class="fas fa-lock fa-2x mb-2"></i>
+                        <p>Secure payment form from your provider (e.g., Stripe, PayPal) will be embedded here.</p>
+                        <p class="text-xs mt-1">Do not enter real card details in this static template.</p>
+                    </div>
+                    {/* Example of how fields might look - DO NOT USE FOR ACTUAL COLLECTION */}
+                    <div class="mt-4 space-y-4 hidden"> {/* Hidden by default, only for visual guide */}
+                        <div>
+                            <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+                            <input type="text" id="card-number" placeholder="•••• •••• •••• ••••" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="expiry-date" class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
+                                <input type="text" id="expiry-date" placeholder="MM / YY" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm">
+                            </div>
+                            <div>
+                                <label for="cvc" class="block text-sm font-medium text-gray-700 mb-1">CVC / CVV</label>
+                                <input type="text" id="cvc" placeholder="•••" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="card-name" class="block text-sm font-medium text-gray-700 mb-1">Name on Card</label>
+                            <input type="text" id="card-name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="paypal-button-container" class="hidden mt-6 text-center"> {/* Show/hide this based on selection */}
+                    <p class="text-gray-600 mb-2">You will be redirected to PayPal to complete your payment.</p>
+                    <button class="bg-yellow-400 hover:bg-yellow-500 text-blue-800 font-semibold py-3 px-6 rounded-md inline-flex items-center">
+                        <i class="fab fa-paypal mr-2"></i> Continue with PayPal
+                    </button>
+                </div>
+
+
+                <h2 class="text-2xl font-bold mb-6 mt-8">Billing Address</h2>
+                <div class="space-y-4 mb-6">
+                    <label class="flex items-center p-3 border border-gray-300 rounded-md">
+                        <input type="radio" name="billing-address" value="same" class="focus:ring-red-500 h-4 w-4 text-red-600 border-gray-300" checked>
+                        <span class="ml-3 text-sm font-medium text-gray-900">Same as shipping address</span>
+                    </label>
+                    <label class="flex items-center p-3 border border-gray-300 rounded-md">
+                        <input type="radio" name="billing-address" value="different" class="focus:ring-red-500 h-4 w-4 text-red-600 border-gray-300">
+                        <span class="ml-3 text-sm font-medium text-gray-900">Use a different billing address</span>
+                    </label>
+                </div>
+
+                {/* Different Billing Address Form (Initially hidden) */}
+                <div id="different-billing-address-fields" class="hidden space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="billing-first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                            <input type="text" id="billing-first-name" name="billing-first-name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500">
+                        </div>
+                        <div>
+                            <label for="billing-last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                            <input type="text" id="billing-last-name" name="billing-last-name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="billing-address" class="block text-sm font-medium text-gray-700 mb-1">Street Address *</label>
+                        <input type="text" id="billing-address" name="billing-address" placeholder="123 Billing St" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500">
+                    </div>
+                    {/* Add City, State, Zip, Country for billing address as needed */}
+                </div>
+
+                <div class="mt-8 flex justify-between items-center">
+                    <a href="checkout-shipping.html" class="text-gray-600 hover:kannon-red-text"><i class="fas fa-arrow-left mr-2"></i>Return to Shipping</a>
+                    {/* This button would submit the payment form in a real application */}
+                    <a href="order-confirmation.html" class="kannon-red kannon-red-hover text-white font-bold py-3 px-8 rounded-md text-lg uppercase tracking-wider">
+                        Pay $104.97 {/* Amount should be dynamic */}
+                    </a>
+                </div>
+                 <p class="text-xs text-gray-500 mt-4 text-center">
+                    By clicking "Pay", you agree to our <a href="terms-conditions.html" class="underline hover:text-red-600">Terms and Conditions</a> and <a href="privacy-policy.html" class="underline hover:text-red-600">Privacy Policy</a>.
+                </p>
+            </section>
+
+            <aside class="lg:col-span-1 order-summary p-6 md:p-8 rounded-lg shadow-lg h-fit sticky top-28">
+                <h2 class="text-2xl font-bold mb-6">Order Summary</h2>
+                <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-300">
+                    <div class="flex items-center">
+                        <img src="images/classic_fedora_product.png" alt="Classic Wool Fedora" class="w-16 h-16 object-cover rounded mr-4">
+                        <div>
+                            <p class="font-semibold">Classic Wool Fedora</p>
+                            <p class="text-sm text-gray-600">Qty: 1</p>
+                        </div>
+                    </div>
+                    <p class="font-semibold">$49.99</p>
+                </div>
+                <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-300">
+                    <div class="flex items-center">
+                        <img src="images/Urban_beanie_product.png" alt="Urban Beanie" class="w-16 h-16 object-cover rounded mr-4">
+                        <div>
+                            <p class="font-semibold">Urban Beanie</p>
+                            <p class="text-sm text-gray-600">Qty: 2</p>
+                        </div>
+                    </div>
+                    <p class="font-semibold">$49.98</p>
+                </div>
+                <div class="space-y-2 mt-6">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Subtotal:</span>
+                        <span class="font-semibold">$99.97</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Shipping:</span>
+                        <span class="font-semibold" id="shipping-cost-summary">$5.00</span> {/* This would be carried over */}
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Taxes (Est.):</span>
+                        <span class="font-semibold" id="taxes-summary">$8.25</span> {/* Example tax */}
+                    </div>
+                    <div class="flex justify-between font-bold text-xl pt-4 border-t border-gray-300 mt-2">
+                        <span>Total:</span>
+                        <span id="total-cost-summary">$113.22</span> {/* Example total with tax */}
+                    </div>
+                </div>
+                <div class="mt-6 text-xs text-gray-500">
+                    <p><i class="fas fa-lock mr-1"></i> Secure Checkout. Your information is protected.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="py-10 md:py-16 mt-12">
+        {/* Footer content same as other pages */}
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {mobileMenuButton.addEventListener('click', () => {mobileMenu.classList.toggle('hidden');});}
+        // const currentYearSpan = document.getElementById('currentYear'); // Ensure currentYear element exists in footer
+        // if (currentYearSpan) {currentYearSpan.textContent = new Date().getFullYear();}
+
+        // JS to show/hide payment method fields and billing address form
+        const paymentMethodRadios = document.querySelectorAll('input[name="payment-method"]');
+        const creditCardFields = document.getElementById('credit-card-fields');
+        const paypalButtonContainer = document.getElementById('paypal-button-container');
+
+        paymentMethodRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'credit-card') {
+                    creditCardFields.style.display = 'block';
+                    paypalButtonContainer.style.display = 'none';
+                } else if (this.value === 'paypal') {
+                    creditCardFields.style.display = 'none';
+                    paypalButtonContainer.style.display = 'block';
+                } else {
+                    creditCardFields.style.display = 'none';
+                    paypalButtonContainer.style.display = 'none';
+                }
+            });
+        });
+        // Trigger change on load for the default checked
+        document.querySelector('input[name="payment-method"]:checked').dispatchEvent(new Event('change'));
+
+
+        const billingAddressRadios = document.querySelectorAll('input[name="billing-address"]');
+        const differentBillingAddressFields = document.getElementById('different-billing-address-fields');
+        billingAddressRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'different') {
+                    differentBillingAddressFields.style.display = 'block';
+                } else {
+                    differentBillingAddressFields.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

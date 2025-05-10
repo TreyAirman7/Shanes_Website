@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name - Kannon Hat Co.</title> <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles for Kannon Hat Co. (Same as index.html) */
+        body {font-family: 'Open Sans', sans-serif; background-color: #FFFBEB; color: #1F2937;}
+        h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;}
+        .nav-link-hover:hover {color: #B91C1C;}
+        .kannon-red {background-color: #B91C1C; color: white;}
+        .kannon-red-text {color: #B91C1C;}
+        .kannon-red-border {border-color: #B91C1C;}
+        .kannon-red-hover:hover {background-color: #A01717;}
+        .dropdown:hover .dropdown-menu {display: block;}
+        .dropdown-menu {display: none;position: absolute;background-color: #ffffff;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 50;border-radius: 0.375rem;border: 1px solid #e5e7eb;}
+        .dropdown-menu a {color: #1F2937;padding: 12px 16px;text-decoration: none;display: block;}
+        .dropdown-menu a:hover {background-color: #f3f4f6;}
+        .kannon-logo img {max-height: 60px; width: auto;}
+        @media (min-width: 768px) {.kannon-logo img {max-height: 80px;}}
+        footer {background-color: #1F2937;color: #FFFBEB;}
+        footer a:hover {color: #B91C1C;}
+        .footer-icon {font-size: 1.5rem;margin: 0 0.5rem;}
+        /* PDP Specific Styles */
+        .product-image-gallery img {
+            border: 1px solid #e5e7eb; /* gray-200 */
+            border-radius: 0.375rem; /* md */
+            cursor: pointer;
+        }
+        .product-image-gallery .active-thumbnail {
+            border-color: #B91C1C; /* Kannon Red */
+            box-shadow: 0 0 0 2px #B91C1C;
+        }
+        .size-option, .color-option {
+            border: 1px solid #d1d5db; /* gray-300 */
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .size-option:hover, .color-option:hover {
+            border-color: #B91C1C;
+        }
+        .size-option.selected, .color-option.selected {
+            border-color: #B91C1C;
+            background-color: #B91C1C;
+            color: white;
+        }
+        .color-swatch {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin-right: 0.25rem;
+            vertical-align: middle;
+        }
+        .tabs button {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+        }
+        .tabs button.active {
+            color: #B91C1C;
+            border-bottom-color: #B91C1C;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 kannon-logo">
+                    <a href="index.html"> <img src="images/Kannon_Logo_2.png" alt="Kannon Hat Co. Logo">
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <div class="relative dropdown">
+                        <button class="font-semibold nav-link-hover focus:outline-none py-2">
+                            SHOP HATS <i class="fas fa-chevron-down fa-xs ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu mt-2 w-48 rounded-md shadow-lg py-1">
+                            <a href="fedoras.html" class="block px-4 py-2 text-sm">Fedoras</a>
+                            <a href="beanies.html" class="block px-4 py-2 text-sm">Beanies</a>
+                            <a href="baseball-caps.html" class="block px-4 py-2 text-sm">Baseball Caps</a>
+                            <a href="sun-hats.html" class="block px-4 py-2 text-sm">Sun Hats</a>
+                            <a href="new-arrivals.html" class="block px-4 py-2 text-sm font-semibold kannon-red-text">New Arrivals</a>
+                            <a href="best-sellers.html" class="block px-4 py-2 text-sm">Best Sellers</a>
+                            <a href="shop.html" class="block px-4 py-2 text-sm border-t border-gray-200">All Hats</a>
+                        </div>
+                    </div>
+                    <a href="our-story.html" class="font-semibold nav-link-hover">OUR STORY</a> <a href="style-guide.html" class="font-semibold nav-link-hover">STYLE GUIDE</a> <a href="contact.html" class="font-semibold nav-link-hover">CONTACT / HELP</a> </nav>
+
+                <div class="flex items-center space-x-4">
+                    <a href="search-results.html" class="text-gray-600 hover:text-red-700"> <i class="fas fa-search fa-lg"></i>
+                    </a>
+                    <a href="login.html" class="text-gray-600 hover:text-red-700"> <i class="fas fa-user fa-lg"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-600 hover:text-red-700 relative"> <i class="fas fa-shopping-cart fa-lg"></i>
+                        <span id="cart-item-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span> </a>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-red-700 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <a href="shop.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">SHOP HATS</a>
+            <a href="fedoras.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Fedoras</a>
+            <a href="beanies.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Beanies</a>
+            <a href="baseball-caps.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Baseball Caps</a>
+            <a href="sun-hats.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Sun Hats</a>
+            <a href="new-arrivals.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- New Arrivals</a>
+            <a href="best-sellers.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Best Sellers</a>
+            <a href="our-story.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">OUR STORY</a>
+            <a href="style-guide.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">STYLE GUIDE</a>
+            <a href="contact.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">CONTACT / HELP</a>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <nav class="text-sm mb-6" aria-label="Breadcrumb">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="index.html" class="text-gray-500 hover:text-red-600">Home</a>
+                    <i class="fas fa-chevron-right fa-xs text-gray-400 mx-2"></i>
+                </li>
+                <li class="flex items-center">
+                    <a href="shop.html" class="text-gray-500 hover:text-red-600">Shop</a>
+                    <i class="fas fa-chevron-right fa-xs text-gray-400 mx-2"></i>
+                </li>
+                <li class="flex items-center">
+                    <a href="fedoras.html" class="text-gray-500 hover:text-red-600">Fedoras</a>
+                    <i class="fas fa-chevron-right fa-xs text-gray-400 mx-2"></i>
+                </li>
+                <li class="text-gray-700" aria-current="page">Classic Wool Fedora</li> </ol>
+        </nav>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div class="product-image-gallery">
+                <div class="mb-4">
+                    <img id="mainProductImage" src="images/classic_fedora_product.png" alt="Classic Wool Fedora - Main View" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                </div>
+                <div class="grid grid-cols-4 gap-2">
+                    <img src="images/classic_fedora_product.png" alt="Fedora Thumbnail 1" class="active-thumbnail product-thumbnail h-24 w-full object-cover" onclick="changeImage('images/classic_fedora_product.png')">
+                    <img src="images/fedora_thumb_2.png" alt="Fedora Thumbnail 2" class="product-thumbnail h-24 w-full object-cover" onclick="changeImage('images/fedora_thumb_2.png')">
+                    <img src="images/fedora_thumb_3.png" alt="Fedora Thumbnail 3" class="product-thumbnail h-24 w-full object-cover" onclick="changeImage('images/fedora_thumb_3.png')">
+                    <img src="images/fedora_thumb_4.png" alt="Fedora Thumbnail 4" class="product-thumbnail h-24 w-full object-cover" onclick="changeImage('images/fedora_thumb_4.png')">
+                    </div>
+            </div>
+
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Classic Wool Fedora</h1> <div class="flex items-center mb-4">
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#reviews" class="ml-2 text-sm text-gray-600 hover:text-red-600">(125 Reviews)</a>
+                </div>
+                <p class="text-3xl font-semibold kannon-red-text mb-6">$49.99</p> <p class="text-gray-700 mb-6">
+                    A timeless classic, this 100% wool fedora offers both style and warmth. Perfect for any occasion,
+                    it features a comfortable inner band and a stylish grosgrain ribbon.
+                </p> <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-2">Color: <span id="selectedColorName">Black</span></h3>
+                    <div class="flex space-x-2">
+                        <button class="color-option selected p-1" data-color-name="Black" onclick="selectColor(this, '#000000')">
+                            <span class="color-swatch" style="background-color: #000000;"></span> Black
+                        </button>
+                        <button class="color-option p-1" data-color-name="Charcoal" onclick="selectColor(this, '#36454F')">
+                             <span class="color-swatch" style="background-color: #36454F;"></span> Charcoal
+                        </button>
+                        <button class="color-option p-1" data-color-name="Brown" onclick="selectColor(this, '#A52A2A')">
+                             <span class="color-swatch" style="background-color: #A52A2A;"></span> Brown
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-semibold">Size: <span id="selectedSizeName">Medium</span></h3>
+                        <a href="size-guide.html" class="text-sm kannon-red-text hover:underline">Size Guide</a>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="size-option" data-size-name="Small" onclick="selectSize(this)">S</button>
+                        <button class="size-option selected" data-size-name="Medium" onclick="selectSize(this)">M</button>
+                        <button class="size-option" data-size-name="Large" onclick="selectSize(this)">L</button>
+                        <button class="size-option" data-size-name="Extra Large" onclick="selectSize(this)">XL</button>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="flex items-center border border-gray-300 rounded-md">
+                        <button onclick="changeQuantity(-1)" class="px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-l-md">-</button>
+                        <input type="text" id="quantityInput" value="1" class="w-12 text-center border-0 focus:ring-0" readonly>
+                        <button onclick="changeQuantity(1)" class="px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-r-md">+</button>
+                    </div>
+                    <button class="flex-grow kannon-red kannon-red-hover font-bold py-3 px-6 rounded-md text-lg uppercase tracking-wider">
+                        <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                    </button>
+                </div>
+                <button class="w-full text-gray-700 border border-gray-300 hover:border-red-500 hover:text-red-500 font-semibold py-3 px-6 rounded-md text-md uppercase tracking-wider">
+                    <i class="far fa-heart mr-2"></i> Add to Wishlist
+                </button>
+
+            </div>
+        </section>
+
+        <section class="mt-12 md:mt-16">
+            <div class="border-b border-gray-200">
+                <nav class="tabs -mb-px flex space-x-8" aria-label="Tabs">
+                    <button onclick="openTab(event, 'descriptionTab')" class="tab-button active">Description</button>
+                    <button onclick="openTab(event, 'detailsTab')" class="tab-button">Details & Care</button>
+                    <button onclick="openTab(event, 'reviewsTab')" class="tab-button">Reviews (<span id="reviewCount">125</span>)</button>
+                </nav>
+            </div>
+            <div id="descriptionTab" class="tab-content py-6">
+                <h4 class="text-xl font-semibold mb-3">Product Description</h4>
+                <p class="text-gray-700 leading-relaxed">
+                    Embrace timeless elegance with the Kannon Classic Wool Fedora. Crafted from 100% premium wool, this hat is designed for both sophisticated style and comfortable wear. The structured crown and medium brim offer a universally flattering silhouette, while the luxurious grosgrain ribbon band adds a touch of classic refinement.
+                    <br><br>
+                    Whether you're dressing up for a special occasion or adding a polished finish to your everyday ensemble, this fedora is a versatile wardrobe staple. Its durable construction ensures it will be a cherished piece for years to come.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mt-4 space-y-1">
+                    <li>100% Premium Wool Felt</li>
+                    <li>Comfortable interior sweatband</li>
+                    <li>Stylish Grosgrain Ribbon Detail</li>
+                    <li>Classic Fedora Silhouette</li>
+                    <li>Available in multiple colors and sizes</li>
+                </ul>
+            </div>
+            <div id="detailsTab" class="tab-content py-6 hidden">
+                <h4 class="text-xl font-semibold mb-3">Product Details & Care Instructions</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                    <div>
+                        <h5 class="font-semibold">Material:</h5>
+                        <p>Outer: 100% Wool Felt</p>
+                        <p>Band: Grosgrain Ribbon</p>
+                        <p>Sweatband: Cotton Blend</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold">Dimensions (Medium Size):</h5>
+                        <p>Brim Width: Approx. 2.5 inches (6.35 cm)</p>
+                        <p>Crown Height: Approx. 4.5 inches (11.43 cm)</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold">Care Instructions:</h5>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Spot clean with a damp cloth only.</li>
+                            <li>Use a soft brush to remove dust or lint.</li>
+                            <li>Do not wash, bleach, tumble dry, or iron.</li>
+                            <li>Store in a cool, dry place, preferably in a hat box to maintain shape.</li>
+                            <li>Avoid prolonged exposure to direct sunlight or moisture.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="reviewsTab" class="tab-content py-6 hidden">
+                <h4 class="text-xl font-semibold mb-3">Customer Reviews</h4>
+                <div class="border-b border-gray-200 pb-4 mb-4">
+                    <div class="flex items-center mb-1">
+                        <span class="font-semibold mr-2">Alex P.</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-xs text-gray-500 ml-auto">May 5, 2025</span>
+                    </div>
+                    <p class="text-gray-700">Absolutely love this fedora! The quality is fantastic for the price. Fits perfectly and looks very stylish. Highly recommend.</p>
+                </div>
+                <div class="border-b border-gray-200 pb-4 mb-4">
+                    <div class="flex items-center mb-1">
+                        <span class="font-semibold mr-2">Jamie L.</span>
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                         <span class="text-xs text-gray-500 ml-auto">April 28, 2025</span>
+                    </div>
+                    <p class="text-gray-700">Great hat, very comfortable. The charcoal color is perfect. Only wish it came in a slightly wider brim option.</p>
+                </div>
+                <a href="#" class="kannon-red-text hover:underline font-semibold">Write a review</a>
+            </div>
+        </section>
+
+        <section class="mt-12 md:mt-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">You Might Also Like</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <a href="product-detail.html" class="block">
+                        <img src="images/Urban_beanie_product.png" alt="Urban Beanie" class="w-full h-80 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-1"><a href="product-detail.html" class="hover:kannon-red-text">Urban Beanie</a></h3>
+                        <p class="text-gray-700 text-lg mb-2">$24.99</p>
+                        <a href="product-detail.html" class="w-full block text-center kannon-red kannon-red-hover font-semibold py-2 px-4 rounded-md text-sm uppercase tracking-wider">
+                            VIEW HAT
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <a href="product-detail.html" class="block">
+                        <img src="images/vintage_baseball_product.png" alt="Vintage Baseball Cap" class="w-full h-80 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                    </a>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-1"><a href="product-detail.html" class="hover:kannon-red-text">Vintage Baseball Cap</a></h3>
+                        <p class="text-gray-700 text-lg mb-2">$32.00</p>
+                        <a href="product-detail.html" class="w-full block text-center kannon-red kannon-red-hover font-semibold py-2 px-4 rounded-md text-sm uppercase tracking-wider">
+                            VIEW HAT
+                        </a>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="py-10 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Shop</h5><ul class="space-y-2"><li><a href="fedoras.html" class="hover:underline">Fedoras</a></li><li><a href="beanies.html" class="hover:underline">Beanies</a></li><li><a href="baseball-caps.html" class="hover:underline">Baseball Caps</a></li><li><a href="sun-hats.html" class="hover:underline">Sun Hats</a></li><li><a href="new-arrivals.html" class="hover:underline">New Arrivals</a></li><li><a href="shop.html" class="hover:underline">All Hats</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Kannon Co.</h5><ul class="space-y-2"><li><a href="our-story.html" class="hover:underline">Our Story</a></li><li><a href="style-guide.html" class="hover:underline">Style Guide</a></li><li><a href="careers.html" class="hover:underline">Careers (Future)</a></li><li><a href="press.html" class="hover:underline">Press (Future)</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Support</h5><ul class="space-y-2"><li><a href="contact.html" class="hover:underline">Contact Us</a></li><li><a href="faq.html" class="hover:underline">FAQ</a></li><li><a href="shipping-returns.html" class="hover:underline">Shipping & Returns</a></li><li><a href="size-guide.html" class="hover:underline">Size Guide</a></li><li><a href="track-order.html" class="hover:underline">Track Order</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Connect</h5><p class="mb-3">Email: <a href="mailto:hello@kannonhatco.com" class="hover:underline">hello@kannonhatco.com</a></p><p class="mb-4">Phone: <a href="tel:+1234567890" class="hover:underline">+1 (234) 567-890</a></p><div class="flex space-x-4"><a href="#" aria-label="Facebook" class="footer-icon hover:text-red-500"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram" class="footer-icon hover:text-red-500"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Pinterest" class="footer-icon hover:text-red-500"><i class="fab fa-pinterest-p"></i></a><a href="#" aria-label="Twitter / X" class="footer-icon hover:text-red-500"><i class="fab fa-twitter"></i></a></div></div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center md:flex md:justify-between"><p class="text-sm mb-4 md:mb-0">&copy; <span id="currentYear"></span> Kannon Hat Co. All Rights Reserved.</p><div class="flex justify-center space-x-2"><i class="fab fa-cc-visa fa-2x"></i><i class="fab fa-cc-mastercard fa-2x"></i><i class="fab fa-cc-paypal fa-2x"></i><i class="fab fa-cc-amex fa-2x"></i></div></div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        // Set current year
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Product Detail Page Specific JS
+        function changeImage(imageSrc) {
+            document.getElementById('mainProductImage').src = imageSrc;
+            // Update active thumbnail
+            document.querySelectorAll('.product-thumbnail').forEach(thumb => thumb.classList.remove('active-thumbnail'));
+            event.target.classList.add('active-thumbnail');
+        }
+
+        function selectColor(element, colorHex) {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('selectedColorName').textContent = element.dataset.colorName;
+            // In a real app, you might change the main image or check availability for this color.
+        }
+
+        function selectSize(element) {
+            document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('selectedSizeName').textContent = element.dataset.sizeName;
+        }
+
+        function changeQuantity(amount) {
+            const quantityInput = document.getElementById('quantityInput');
+            let currentValue = parseInt(quantityInput.value);
+            currentValue += amount;
+            if (currentValue < 1) {
+                currentValue = 1;
+            }
+            quantityInput.value = currentValue;
+        }
+
+        function openTab(event, tabName) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            // Show selected tab content and activate button
+            document.getElementById(tabName).classList.remove('hidden');
+            event.currentTarget.classList.add('active');
+        }
+        // Initialize first tab as active
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstTabButton = document.querySelector('.tab-button');
+            if(firstTabButton) {
+                firstTabButton.click();
+            }
+        });
+
+    </script>
+</body>
+</html>
