@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title Placeholder - Kannon Style Guide</title> <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles for Kannon Hat Co. (Same as index.html) */
+        body {font-family: 'Open Sans', sans-serif; background-color: #FFFBEB; color: #1F2937;}
+        h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;}
+        .nav-link-hover:hover {color: #B91C1C;}
+        .kannon-red {background-color: #B91C1C; color: white;}
+        .kannon-red-text {color: #B91C1C;}
+        .kannon-red-border {border-color: #B91C1C;}
+        .kannon-red-hover:hover {background-color: #A01717;}
+        .dropdown:hover .dropdown-menu {display: block;}
+        .dropdown-menu {display: none;position: absolute;background-color: #ffffff;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 50;border-radius: 0.375rem;border: 1px solid #e5e7eb;}
+        .dropdown-menu a {color: #1F2937;padding: 12px 16px;text-decoration: none;display: block;}
+        .dropdown-menu a:hover {background-color: #f3f4f6;}
+        .kannon-logo img {max-height: 60px; width: auto;}
+        @media (min-width: 768px) {.kannon-logo img {max-height: 80px;}}
+        footer {background-color: #1F2937;color: #FFFBEB;}
+        footer a:hover {color: #B91C1C;}
+        .footer-icon {font-size: 1.5rem;margin: 0 0.5rem;}
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem; /* text-lg */
+            color: #374151; /* gray-700 */
+        }
+        .article-content h2 {
+            font-size: 1.875rem; /* text-2xl */
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .article-content h3 {
+            font-size: 1.5rem; /* text-xl */
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .article-content ul, .article-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            list-style-position: outside;
+        }
+        .article-content ul li { list-style-type: disc; margin-bottom: 0.5rem;}
+        .article-content ol li { list-style-type: decimal; margin-bottom: 0.5rem;}
+        .article-content blockquote {
+            border-left: 4px solid #B91C1C; /* Kannon Red */
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #4B5563; /* gray-600 */
+        }
+        .category-tag-article {
+            background-color: #B91C1C; /* Kannon Red */
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* rounded-full */
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 600; /* semibold */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 kannon-logo">
+                    <a href="index.html"> <img src="images/Kannon_Logo_2.png" alt="Kannon Hat Co. Logo"></a>
+                </div>
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <div class="relative dropdown">
+                        <button class="font-semibold nav-link-hover focus:outline-none py-2">SHOP HATS <i class="fas fa-chevron-down fa-xs ml-1"></i></button>
+                        <div class="dropdown-menu mt-2 w-48 rounded-md shadow-lg py-1">
+                            <a href="fedoras.html" class="block px-4 py-2 text-sm">Fedoras</a>
+                            <a href="beanies.html" class="block px-4 py-2 text-sm">Beanies</a>
+                            <a href="baseball-caps.html" class="block px-4 py-2 text-sm">Baseball Caps</a>
+                            <a href="sun-hats.html" class="block px-4 py-2 text-sm">Sun Hats</a>
+                            <a href="new-arrivals.html" class="block px-4 py-2 text-sm font-semibold kannon-red-text">New Arrivals</a>
+                            <a href="best-sellers.html" class="block px-4 py-2 text-sm">Best Sellers</a>
+                            <a href="shop.html" class="block px-4 py-2 text-sm border-t border-gray-200">All Hats</a>
+                        </div>
+                    </div>
+                    <a href="our-story.html" class="font-semibold nav-link-hover">OUR STORY</a>
+                    <a href="style-guide.html" class="font-semibold nav-link-hover kannon-red-text">STYLE GUIDE</a> {/* Active Link */}
+                    <a href="contact.html" class="font-semibold nav-link-hover">CONTACT / HELP</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="search-results.html" class="text-gray-600 hover:text-red-700"><i class="fas fa-search fa-lg"></i></a>
+                    <a href="login.html" class="text-gray-600 hover:text-red-700"><i class="fas fa-user fa-lg"></i></a>
+                    <a href="cart.html" class="text-gray-600 hover:text-red-700 relative"><i class="fas fa-shopping-cart fa-lg"></i><span id="cart-item-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span></a>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-red-700 focus:outline-none"><i class="fas fa-bars fa-lg"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <a href="shop.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">SHOP HATS</a>
+            <a href="fedoras.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Fedoras</a>
+            <a href="beanies.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Beanies</a>
+            <a href="baseball-caps.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Baseball Caps</a>
+            <a href="sun-hats.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Sun Hats</a>
+            <a href="new-arrivals.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- New Arrivals</a>
+            <a href="best-sellers.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Best Sellers</a>
+            <a href="our-story.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">OUR STORY</a>
+            <a href="style-guide.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700 kannon-red-text">STYLE GUIDE</a>
+            <a href="contact.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">CONTACT / HELP</a>
+            <a href="account.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700 border-t border-gray-100">My Account</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <article class="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-lg shadow-xl">
+            <nav class="text-sm mb-6" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="index.html" class="text-gray-500 hover:text-red-600">Home</a>
+                        <i class="fas fa-chevron-right fa-xs text-gray-400 mx-2"></i>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="style-guide.html" class="text-gray-500 hover:text-red-600">Style Guide</a>
+                        <i class="fas fa-chevron-right fa-xs text-gray-400 mx-2"></i>
+                    </li>
+                    <li class="text-gray-700" aria-current="page">Top 5 Hats for Your Summer Adventures</li> </ol>
+            </nav>
+
+            <header class="mb-8">
+                <span class="category-tag-article mb-3">Seasonal Style</span> <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">Top 5 Hats for Your Summer Adventures</h1> <p class="text-gray-500 text-sm">
+                    By <span class="font-semibold text-gray-700">Kannon Style Team</span> • Published on <time datetime="2025-05-08">May 8, 2025</time>
+                    <span class="mx-1">·</span>
+                    <span>Est. 5 min read</span>
+                </p>
+            </header>
+
+            <figure class="mb-8">
+                <img src="images/style_guide_featured.jpg" alt="Stylish person wearing a summer hat" class="w-full h-auto object-cover rounded-lg shadow-md">
+                <figcaption class="text-center text-sm text-gray-500 mt-2">Stay cool and chic with the right summer headwear.</figcaption>
+            </figure>
+
+            <div class="article-content text-gray-800">
+                <p>Summer is synonymous with sunshine, adventures, and making memories. Whether you're lounging by the pool, exploring a new city, or hiking scenic trails, the right hat is an essential companion. Not only does it offer crucial protection from the sun's rays, but it also adds an instant touch of style to any outfit. At Kannon Hat Co., we've curated our top 5 hat picks to ensure you're covered (literally!) for all your summer escapades.</p>
+
+                <h2>1. The Classic Wide-Brim Straw Hat</h2>
+                <p>No summer wardrobe is complete without a wide-brim straw hat. Perfect for beach days, garden parties, or simply strolling through a farmers market, this style offers maximum sun protection for your face, neck, and shoulders. Look for tightly woven straw for better UPF rating.</p>
+                <p><strong>Styling Tip:</strong> Pair it with a flowy sundress and espadrilles for a timeless, feminine look. For a more casual vibe, team it with denim shorts and a breezy linen shirt.</p>
+
+                <figure class="my-6">
+                     <img src="images/wide_brim_sunhat_product.png" alt="Wide Brim Straw Hat Example" class="w-full max-w-md mx-auto h-auto object-cover rounded-lg shadow">
+                     <figcaption class="text-center text-sm text-gray-500 mt-2">Our "Riviera Breeze" Wide-Brim Straw Hat.</figcaption>
+                </figure>
+
+                <h2>2. The Versatile Bucket Hat</h2>
+                <p>The bucket hat has made a major comeback and is a fantastic choice for a relaxed, trendy summer look. Its packable nature makes it ideal for travel, and it comes in a variety of materials from cotton canvas to quick-drying nylon for more active pursuits.</p>
+                <p><strong>Styling Tip:</strong> Rock a canvas bucket hat with your favorite graphic tee and cargo shorts for a street-style edge. For a day by the water, a nylon bucket hat pairs well with swimwear and a rash guard.</p>
+
+                <h2>3. The Sporty Baseball Cap</h2>
+                <p>A trusty baseball cap is a year-round staple, but it truly shines in the summer. It's perfect for shielding your eyes during outdoor activities, from a morning run to an afternoon baseball game. Opt for breathable materials like cotton or performance fabrics.</p>
+                <blockquote>"A well-chosen baseball cap can be surprisingly chic. Don't be afraid to pair it with more dressed-up casual pieces for an unexpected twist." - Kannon Style Team</blockquote>
+
+                <h2>4. The Elegant Panama Hat (or Fedora-Style Straw Hat)</h2>
+                <p>For a touch of sophistication, a Panama hat (or a similar fedora-style straw hat) is an excellent choice. Traditionally handwoven in Ecuador, genuine Panama hats are lightweight, breathable, and incredibly stylish. They can elevate even the simplest summer outfit.</p>
+                <ul>
+                    <li>Offers excellent sun protection.</li>
+                    <li>Lightweight and breathable.</li>
+                    <li>Adds a touch of timeless elegance.</li>
+                </ul>
+
+                <h2>5. The Practical Visor</h2>
+                <p>If you prefer to keep your head cool while still protecting your face, a visor is a great option, especially for sports like tennis or golf, or for lounging by the pool when you want to show off your summer hairstyle. Look for visors with a comfortable, adjustable band.</p>
+                <p><strong>Styling Tip:</strong> Pair a sporty visor with your athletic wear or a chic straw visor with your resort wear for a touch of glamour.</p>
+
+                <hr class="my-8 border-gray-300">
+
+                <p>No matter your summer plans, Kannon Hat Co. has the perfect hat to complement your style and keep you protected. Explore our latest <a href="new-arrivals.html" class="kannon-red-text hover:underline font-semibold">New Arrivals</a> or browse our full <a href="shop.html" class="kannon-red-text hover:underline font-semibold">Summer Collection</a> to find your new favorite!</p>
+            </div>
+
+            <footer class="mt-10 pt-6 border-t border-gray-200">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="mb-4 sm:mb-0">
+                        <span class="text-sm font-semibold text-gray-700 mr-2">Tags:</span>
+                        <a href="#" class="text-xs bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 py-1 rounded-full mr-1 mb-1 inline-block">Summer Style</a>
+                        <a href="#" class="text-xs bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 py-1 rounded-full mr-1 mb-1 inline-block">Hat Guide</a>
+                        <a href="#" class="text-xs bg-gray-200 hover:bg-gray-300 text-gray-700 px-2 py-1 rounded-full mb-1 inline-block">Sun Protection</a>
+                    </div>
+                    <div class="flex space-x-3">
+                        <span class="text-sm font-semibold text-gray-700">Share:</span>
+                        <a href="#" aria-label="Share on Facebook" class="text-gray-500 hover:text-blue-600"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" aria-label="Share on Twitter" class="text-gray-500 hover:text-sky-500"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" aria-label="Share on Pinterest" class="text-gray-500 hover:text-red-600"><i class="fab fa-pinterest-p fa-lg"></i></a>
+                        <a href="#" aria-label="Share via Email" class="text-gray-500 hover:text-gray-700"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </article>
+
+        <section class="mt-12 md:mt-16 max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">More Style Inspiration</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <a href="style-guide-article-placeholder.html" class="post-card block bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/style_guide_thumb1.jpg" alt="Hat Care Tips" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-tag mb-2 inline-block">Hat Care</span>
+                        <h3 class="text-xl font-bold mb-2 hover:kannon-red-text transition-colors">The Ultimate Guide to Caring for Your Hats</h3>
+                        <p class="text-gray-700 text-sm mb-3 leading-relaxed">Keep your Kannon hats looking their best...</p>
+                    </div>
+                </a>
+                <a href="style-guide-article-placeholder.html" class="post-card block bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/style_guide_thumb2.jpg" alt="Choosing a Fedora" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-tag mb-2 inline-block">Style Advice</span>
+                        <h3 class="text-xl font-bold mb-2 hover:kannon-red-text transition-colors">Finding Your Perfect Fedora</h3>
+                        <p class="text-gray-700 text-sm mb-3 leading-relaxed">Demystify the world of fedoras! Learn about...</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-10 md:py-16 mt-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Shop</h5><ul class="space-y-2"><li><a href="fedoras.html" class="hover:underline">Fedoras</a></li><li><a href="beanies.html" class="hover:underline">Beanies</a></li><li><a href="baseball-caps.html" class="hover:underline">Baseball Caps</a></li><li><a href="sun-hats.html" class="hover:underline">Sun Hats</a></li><li><a href="new-arrivals.html" class="hover:underline">New Arrivals</a></li><li><a href="shop.html" class="hover:underline">All Hats</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Kannon Co.</h5><ul class="space-y-2"><li><a href="our-story.html" class="hover:underline">Our Story</a></li><li><a href="style-guide.html" class="hover:underline">Style Guide</a></li><li><a href="careers.html" class="hover:underline">Careers (Future)</a></li><li><a href="press.html" class="hover:underline">Press (Future)</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Support</h5><ul class="space-y-2"><li><a href="contact.html" class="hover:underline">Contact Us</a></li><li><a href="faq.html" class="hover:underline">FAQ</a></li><li><a href="shipping-returns.html" class="hover:underline">Shipping & Returns</a></li><li><a href="size-guide.html" class="hover:underline">Size Guide</a></li><li><a href="track-order.html" class="hover:underline">Track Order</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Connect</h5><p class="mb-3">Email: <a href="mailto:hello@kannonhatco.com" class="hover:underline">hello@kannonhatco.com</a></p><p class="mb-4">Phone: <a href="tel:+1234567890" class="hover:underline">+1 (234) 567-890</a></p><div class="flex space-x-4"><a href="#" aria-label="Facebook" class="footer-icon hover:text-red-500"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram" class="footer-icon hover:text-red-500"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Pinterest" class="footer-icon hover:text-red-500"><i class="fab fa-pinterest-p"></i></a><a href="#" aria-label="Twitter / X" class="footer-icon hover:text-red-500"><i class="fab fa-twitter"></i></a></div></div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center md:flex md:justify-between"><p class="text-sm mb-4 md:mb-0">&copy; <span id="currentYear"></span> Kannon Hat Co. All Rights Reserved.</p><div class="flex justify-center space-x-2"><i class="fab fa-cc-visa fa-2x"></i><i class="fab fa-cc-mastercard fa-2x"></i><i class="fab fa-cc-paypal fa-2x"></i><i class="fab fa-cc-amex fa-2x"></i></div></div>
+        </div>
+    </footer>
+
+    <script>
+        // Basic Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>
