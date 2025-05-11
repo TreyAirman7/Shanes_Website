@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Kannon Hat Co.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles for Kannon Hat Co. (Same as index.html) */
+        body {font-family: 'Open Sans', sans-serif; background-color: #FFFBEB; color: #1F2937;}
+        h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;}
+        .nav-link-hover:hover {color: #B91C1C;}
+        .kannon-red {background-color: #B91C1C; color: white;}
+        .kannon-red-text {color: #B91C1C;}
+        .kannon-red-border {border-color: #B91C1C;}
+        .kannon-red-hover:hover {background-color: #A01717;}
+        .dropdown:hover .dropdown-menu {display: block;}
+        .dropdown-menu {display: none;position: absolute;background-color: #ffffff;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 50;border-radius: 0.375rem;border: 1px solid #e5e7eb;}
+        .dropdown-menu a {color: #1F2937;padding: 12px 16px;text-decoration: none;display: block;}
+        .dropdown-menu a:hover {background-color: #f3f4f6;}
+        .kannon-logo img {max-height: 60px; width: auto;}
+        @media (min-width: 768px) {.kannon-logo img {max-height: 80px;}}
+        footer {background-color: #1F2937;color: #FFFBEB;}
+        footer a:hover {color: #B91C1C;}
+        .footer-icon {font-size: 1.5rem;margin: 0 0.5rem;}
+        .policy-content p, .policy-content ul li, .policy-content ol li {
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            color: #374151; /* gray-700 */
+        }
+        .policy-content h2 {
+            font-size: 1.875rem; /* text-2xl */
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            border-bottom: 2px solid #e5e7eb; /* gray-200 */
+            padding-bottom: 0.5rem;
+        }
+         .policy-content h2:first-of-type {
+            margin-top: 0;
+        }
+        .policy-content h3 {
+            font-size: 1.5rem; /* text-xl */
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .policy-content ul, .policy-content ol {
+            list-style-position: outside;
+            margin-left: 1.5rem;
+        }
+        .policy-content ul li { list-style-type: disc; }
+        .policy-content ol li { list-style-type: decimal; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 kannon-logo">
+                    <a href="index.html"> <img src="images/Kannon_Logo_2.png" alt="Kannon Hat Co. Logo"></a>
+                </div>
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <div class="relative dropdown">
+                        <button class="font-semibold nav-link-hover focus:outline-none py-2">SHOP HATS <i class="fas fa-chevron-down fa-xs ml-1"></i></button>
+                        <div class="dropdown-menu mt-2 w-48 rounded-md shadow-lg py-1">
+                            <a href="fedoras.html" class="block px-4 py-2 text-sm">Fedoras</a>
+                            <a href="beanies.html" class="block px-4 py-2 text-sm">Beanies</a>
+                            <a href="baseball-caps.html" class="block px-4 py-2 text-sm">Baseball Caps</a>
+                            <a href="sun-hats.html" class="block px-4 py-2 text-sm">Sun Hats</a>
+                            <a href="new-arrivals.html" class="block px-4 py-2 text-sm font-semibold kannon-red-text">New Arrivals</a>
+                            <a href="best-sellers.html" class="block px-4 py-2 text-sm">Best Sellers</a>
+                            <a href="shop.html" class="block px-4 py-2 text-sm border-t border-gray-200">All Hats</a>
+                        </div>
+                    </div>
+                    <a href="our-story.html" class="font-semibold nav-link-hover">OUR STORY</a>
+                    <a href="style-guide.html" class="font-semibold nav-link-hover">STYLE GUIDE</a>
+                    <a href="contact.html" class="font-semibold nav-link-hover">CONTACT / HELP</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="search-results.html" class="text-gray-600 hover:text-red-700"><i class="fas fa-search fa-lg"></i></a>
+                    <a href="login.html" class="text-gray-600 hover:text-red-700"><i class="fas fa-user fa-lg"></i></a>
+                    <a href="cart.html" class="text-gray-600 hover:text-red-700 relative"><i class="fas fa-shopping-cart fa-lg"></i><span id="cart-item-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span></a>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-red-700 focus:outline-none"><i class="fas fa-bars fa-lg"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <a href="shop.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">SHOP HATS</a>
+            <a href="fedoras.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Fedoras</a>
+            <a href="beanies.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Beanies</a>
+            <a href="baseball-caps.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Baseball Caps</a>
+            <a href="sun-hats.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Sun Hats</a>
+            <a href="new-arrivals.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- New Arrivals</a>
+            <a href="best-sellers.html" class="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100 hover:text-red-700 ml-4">- Best Sellers</a>
+            <a href="our-story.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">OUR STORY</a>
+            <a href="style-guide.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">STYLE GUIDE</a>
+            <a href="contact.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700">CONTACT / HELP</a>
+            <a href="account.html" class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-red-700 border-t border-gray-100">My Account</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div class="text-center mb-10 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Terms & Conditions</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Please read these terms carefully before using our website or purchasing our products.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-lg shadow-xl policy-content">
+            <p class="text-sm text-gray-500">Last Updated: May 10, 2025</p>
+
+            <section>
+                <h2>1. Agreement to Terms</h2>
+                <p>By accessing or using the Kannon Hat Co. website located at [YourWebsiteURL.com] (the "Site") or purchasing products from us, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to all of these Terms, do not use this Site or purchase our products. We reserve the right to update or modify these Terms at any time without prior notice. Your use of the Site following any such change constitutes your agreement to follow and be bound by the Terms as changed.</p>
+            </section>
+
+            <section>
+                <h2>2. Use of the Site</h2>
+                <p>You may use the Site only for lawful purposes and in accordance with these Terms. You agree not to use the Site:</p>
+                <ul>
+                    <li>In any way that violates any applicable federal, state, local, or international law or regulation.</li>
+                    <li>To engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Site, or which, as determined by us, may harm Kannon Hat Co. or users of the Site, or expose them to liability.</li>
+                    <li>To impersonate or attempt to impersonate Kannon Hat Co., a Kannon Hat Co. employee, another user, or any other person or entity.</li>
+                </ul>
+                <p>The content of the Site, including text, graphics, images, logos, and software, is the property of Kannon Hat Co. or its content suppliers and is protected by copyright and other intellectual property laws. You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, products, or services obtained from the Site without our prior written consent.</p>
+            </section>
+
+            <section>
+                <h2>3. Products and Orders</h2>
+                <h3>Product Descriptions</h3>
+                <p>Kannon Hat Co. attempts to be as accurate as possible in its product descriptions. However, we do not warrant that product descriptions or other content of this Site are accurate, complete, reliable, current, or error-free. If a product offered by Kannon Hat Co. itself is not as described, your sole remedy is to return it in unused condition according to our <a href="shipping-returns.html" class="kannon-red-text hover:underline">Returns Policy</a>.</p>
+                <h3>Pricing</h3>
+                <p>Prices for our products are subject to change without notice. We reserve the right at any time to modify or discontinue a product or service without notice. All prices are listed in [Your Currency, e.g., USD].</p>
+                <h3>Order Acceptance and Cancellation</h3>
+                <p>We reserve the right to refuse or cancel any order for any reason, including limitations on quantities available for purchase, inaccuracies, or errors in product or pricing information, or problems identified by our credit and fraud avoidance department. If your order is canceled after your credit card (or other payment method) has been charged, we will issue a credit to your credit card (or other applicable payment account) in the amount of the charge.</p>
+            </section>
+
+            <section>
+                <h2>4. Accounts</h2>
+                <p>If you create an account on the Site, you are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer. You agree to accept responsibility for all activities that occur under your account or password. Kannon Hat Co. reserves the right to refuse service, terminate accounts, remove or edit content, or cancel orders in its sole discretion.</p>
+            </section>
+
+            <section>
+                <h2>5. Intellectual Property</h2>
+                <p>All content included on the Site, such as text, graphics, logos, images, as well as the compilation thereof, and any software used on the Site, is the property of Kannon Hat Co. or its suppliers and protected by copyright and other laws that protect intellectual property and proprietary rights. The Kannon Hat Co. name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Kannon Hat Co. or its affiliates or licensors. You must not use such marks without the prior written permission of Kannon Hat Co.</p>
+            </section>
+
+            <section>
+                <h2>6. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by applicable law, Kannon Hat Co. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the Site; (b) any conduct or content of any third party on the Site; (c) any content obtained from the Site; or (d) unauthorized access, use, or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence), or any other legal theory, whether or not we have been informed of the possibility of such damage.</p>
+            </section>
+
+            <section>
+                <h2>7. Indemnification</h2>
+                <p>You agree to defend, indemnify, and hold harmless Kannon Hat Co., its officers, directors, employees, agents, licensors, and suppliers from and against any claims, actions or demands, liabilities, and settlements including without limitation, reasonable legal and accounting fees, resulting from, or alleged to result from, your violation of these Terms.</p>
+            </section>
+
+            <section>
+                <h2>8. Governing Law</h2>
+                <p>These Terms and your use of the Site shall be governed by and construed in accordance with the laws of the State of [Your State/Jurisdiction, e.g., Alabama], United States, without regard to its conflict of law principles.</p>
+            </section>
+
+            <section>
+                <h2>9. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+            </section>
+
+            <section>
+                <h2>10. Contact Information</h2>
+                <p>Questions about the Terms and Conditions should be sent to us at:</p>
+                <p>
+                    Kannon Hat Co.<br>
+                    Email: legal@kannonhatco.com <br>
+                    Address: 123 Style Avenue, Fashion City, FS 90210
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="py-10 md:py-16 mt-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Shop</h5><ul class="space-y-2"><li><a href="fedoras.html" class="hover:underline">Fedoras</a></li><li><a href="beanies.html" class="hover:underline">Beanies</a></li><li><a href="baseball-caps.html" class="hover:underline">Baseball Caps</a></li><li><a href="sun-hats.html" class="hover:underline">Sun Hats</a></li><li><a href="new-arrivals.html" class="hover:underline">New Arrivals</a></li><li><a href="shop.html" class="hover:underline">All Hats</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Kannon Co.</h5><ul class="space-y-2"><li><a href="our-story.html" class="hover:underline">Our Story</a></li><li><a href="style-guide.html" class="hover:underline">Style Guide</a></li><li><a href="careers.html" class="hover:underline">Careers (Future)</a></li><li><a href="press.html" class="hover:underline">Press (Future)</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Support</h5><ul class="space-y-2"><li><a href="contact.html" class="hover:underline">Contact Us</a></li><li><a href="faq.html" class="hover:underline">FAQ</a></li><li><a href="shipping-returns.html" class="hover:underline">Shipping & Returns</a></li><li><a href="size-guide.html" class="hover:underline">Size Guide</a></li><li><a href="track-order.html" class="hover:underline">Track Order</a></li></ul></div>
+                <div><h5 class="text-xl font-bold mb-4 uppercase tracking-wider">Connect</h5><p class="mb-3">Email: <a href="mailto:hello@kannonhatco.com" class="hover:underline">hello@kannonhatco.com</a></p><p class="mb-4">Phone: <a href="tel:+1234567890" class="hover:underline">+1 (234) 567-890</a></p><div class="flex space-x-4"><a href="#" aria-label="Facebook" class="footer-icon hover:text-red-500"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram" class="footer-icon hover:text-red-500"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Pinterest" class="footer-icon hover:text-red-500"><i class="fab fa-pinterest-p"></i></a><a href="#" aria-label="Twitter / X" class="footer-icon hover:text-red-500"><i class="fab fa-twitter"></i></a></div></div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center md:flex md:justify-between"><p class="text-sm mb-4 md:mb-0">&copy; <span id="currentYear"></span> Kannon Hat Co. All Rights Reserved.</p><div class="flex justify-center space-x-2"><i class="fab fa-cc-visa fa-2x"></i><i class="fab fa-cc-mastercard fa-2x"></i><i class="fab fa-cc-paypal fa-2x"></i><i class="fab fa-cc-amex fa-2x"></i></div></div>
+        </div>
+    </footer>
+
+    <script>
+        // Basic Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>
